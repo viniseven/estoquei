@@ -1,17 +1,14 @@
 import type { Metadata } from "next";
-import { Inter, Roboto } from "next/font/google";
+import { Ubuntu } from "next/font/google";
 import "./globals.css";
 import AppSidebar from "./_components/sidebar";
 import { SidebarProvider } from "@/components/ui/sidebar";
 
-const inter = Inter({
-  variable: "--font-inter",
+const ubuntu = Ubuntu({
+  weight: ["400", "700"],
+  style: ["normal", "italic"],
   subsets: ["latin"],
-});
-
-const roboto = Roboto({
-  variable: "--font-roboto",
-  subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -26,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${roboto.variable}  antialiased`}>
+      <body className={`${ubuntu.className}  antialiased`}>
         <SidebarProvider>
           <AppSidebar />
           {children}
