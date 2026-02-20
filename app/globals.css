@@ -6,7 +6,7 @@
   :root {
     --color-white: #ffffff;
     --color-green-neon: #39ff14;
-    --color-blue-dar: #001a33;
+    --color-blue-dark: #001a33;
   }
 }
 
@@ -16,10 +16,18 @@
 
   --color-gray-primary: var(--color-slate-50);
   --color-gray-sixth: var(--color-slate-500);
+  --color-gray-fifth: var(--color-slate-400);
+  --color-gray-fourth: var(--color-slate-300);
   --color-neon: var(--color-green-neon);
+
+  --text-size-h1: var(--text-2xl);
 }
 
 html,
 body {
   @apply h-full bg-background-primary scroll-smooth p-0 m-0;
+}
+
+h1 {
+  @apply text-size-h1;
 }
