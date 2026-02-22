@@ -1,7 +1,12 @@
+import Header from "./_components/header";
+
 export default function Home() {
   return (
-    <main>
-      <h1>Dashboard</h1>
+    <main className="w-full">
+      <Header
+        title="Dashboard"
+        subtitle="Visão geral de indicadores e métricas"
+      />
     </main>
   );
 }
