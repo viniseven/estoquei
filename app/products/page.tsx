@@ -2,7 +2,7 @@ import Header from "../_components/header";
 
 export default function ProductsPage() {
   return (
-    <div>
+    <div className="w-full">
       <Header
         title="Produtos"
         subtitle="Gerencie seu inventário, preços e disponibilidade de estoque"
