@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import { Ubuntu } from "next/font/google";
 import "./globals.css";
 import AppSidebar from "./_components/sidebar";
-import { SidebarProvider } from "@/components/ui/sidebar";
+import { SidebarProvider } from "@/app/_components/ui/sidebar";
 
 const ubuntu = Ubuntu({
   weight: ["400", "700"],
   style: ["normal", "italic"],
   subsets: ["latin"],
-  display: "swap",
+  display: "auto",
 });
 
 export const metadata: Metadata = {
@@ -23,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${ubuntu.className}  antialiased`}>
+      <body className={`${ubuntu.className} antialiased`}>
         <SidebarProvider>
           <AppSidebar />
           {children}
